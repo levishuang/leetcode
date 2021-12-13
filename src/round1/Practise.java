@@ -10,7 +10,7 @@ package round1;
 public class Practise {
     int a;
     int b;
-    交换指
+//    交换指
     public Practise(int a, int b){
         this.a = b;
         this.b = a;
