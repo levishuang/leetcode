@@ -63,5 +63,6 @@ public class Problem39 {
             }
             System.out.println();
         }
+
     }
 }
