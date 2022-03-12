@@ -1,5 +1,7 @@
 package round1;
 
+import java.util.Arrays;
+
 //暴力方法不可取，多想想其他方法
 public class Problem11 {
 //    public static int maxArea(int[] height) {
@@ -29,8 +31,24 @@ public class Problem11 {
         return ans;
     }
 
+    public static int maxArea2(int[] height){
+        int low = 0;
+        int high = height.length-1;
+        int maxArea = 0;
+        while(low < high){
+            maxArea = Math.max(maxArea, (high-low)*Math.min(height[low], height[high]));
+            if(height[low] < height[high]){
+                low++;
+            }else {
+                high--;
+            }
+        }
+        return maxArea;
+    }
+
+
     public static void main(String[] args) {
         int[] height = {1,8,6,2,5,4,8,3,7};
-        System.out.println(maxArea(height));
+        System.out.println(maxArea2(height));
     }
 }
