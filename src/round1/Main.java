@@ -20,15 +20,24 @@ public class Main {
 //        while (iterator.hasNext()){
 //            System.out.println(iterator.next());
 //        }
-        test t = new test();
-        String digits = "23";
-        List<String> list = new ArrayList<>();
-        list = t.letterCombinations(digits);
-        Iterator<String> iterator = list.iterator();
+//        test t = new test();
+//        String digits = "23";
+//        List<String> list = new ArrayList<>();
+//        list = t.letterCombinations(digits);
+//        Iterator<String> iterator = list.iterator();
+//        while (iterator.hasNext()){
+//            System.out.println(iterator.next());
+//
+//        }
+        LRUCache lruCache = new LRUCache(2);
+        lruCache.put(1,1);
+        lruCache.put(2,2);
+        lruCache.get(1);
+        lruCache.put(3,3);
+//        System.out.println(lruCache.map.size());
+        Iterator<Integer> iterator = lruCache.map.keySet().iterator();
         while (iterator.hasNext()){
             System.out.println(iterator.next());
-
         }
-
     }
 }
