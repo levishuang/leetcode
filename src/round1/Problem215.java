@@ -24,7 +24,7 @@ public class Problem215 {
         //快速排序
 //        quickSort(nums, 0, nums.length-1);
 //        return nums[k-1];
-        PriorityQueue<Integer> pq = new PriorityQueue<>(); // 小顶堆
+        PriorityQueue<Integer> pq = new PriorityQueue<>(); // 小顶堆,使用队列，将数据从小到大排列
         for (int val : nums) {
             pq.add(val);
             if (pq.size() > k)  // 维护堆的大小为 K
