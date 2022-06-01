@@ -1,1 +1,15 @@
-fffffffff
+1. 打开 Git Bash。
+ 2. ssh-keygen -t ed25519 -C "your_email@example.com" 
+ （使用github官方教程，文件名称没有改，如果出现输入的话一直按回车就行）
+ 3. ssh-agent bash
+ （必须输入这个命令，不然报错：Could not open a connection to your authentication agent.）
+ 4. ssh-add ~/.ssh/id_ed25519
+ 5. 将 SSH 公钥复制到剪贴板   clip < ~/.ssh/id_ed25519.pub
+（一定要这么复制，要不然报错：Key is invalid. You must supply a key in OpenSSH public key format）
+ 7. 在任何页面的右上角，单击您的个人资料照片，然后单击 Settings（设置）。
+7.单击 New SSH key（新 SSH 密钥）或 Add SSH key（添加 SSH 密钥）。
+8.在title命名，并将刚才在剪切板的ssh key复制过来
+9.单击 Add SSH key（添加 SSH 密钥）。
+10.如有提示，请确认您的 GitHub 密码。
+所有操作完成后进行测试:
+ssh -Tv git@github.com
