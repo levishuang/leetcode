@@ -11,7 +11,7 @@ import java.util.*;
  * @date: 2022/8/27 21:14
  */
 
-public class Problem1584 {
+public class Problem1584_kruskal {
     static class UF {
         private int count;
         private int[] parent;

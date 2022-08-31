@@ -10,7 +10,7 @@ import java.util.Comparator;
  * @date: 2022/8/27 20:57
  */
 
-public class Problem1135 {
+public class Problem1135_kruskal {
     static class UF {
         private int count;
         private int[] parent;
